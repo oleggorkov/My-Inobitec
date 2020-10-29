@@ -1,0 +1,89 @@
+.footer {
+    padding: 60px 0;
+    text-align: center;
+
+    @media (max-width: 880px) {
+        font-size: .77778em;
+        padding: 34px 0 60px;
+    }
+
+    .wr {
+        @media (max-width: 800px) {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+
+    &__menu {
+        margin-bottom: 61px;
+
+        @media (max-width: 800px) {
+            margin-bottom: 14px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            margin-left: -43px;
+            padding: 0;
+            list-style: none;
+
+            @media (max-width: 800px) {
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+            }
+
+            li {
+                margin: 0;
+                margin-left: 39px;
+                padding: 0;
+
+                @media (max-width: 800px) {
+                    margin-left: 0;
+                    margin-bottom: -1px;
+                }
+
+                a {
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: 0.777em;
+                    line-height: 1.142em;
+                    letter-spacing: 0.24em;
+                    text-decoration-line: underline;
+                    color: $color-black;
+                    text-transform: uppercase;
+                    border: none;
+                    transition: opacity 0.2s ease;
+
+                    @media (max-width: 800px) {
+                        font-size: 0.857em;
+                        line-height: 1.33em;
+                        font-weight: 700;
+                        letter-spacing: 0.2em;
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    &__copy {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.777em;
+        line-height: 1.142em;
+        letter-spacing: 0.24em;
+        color: $color-black;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (max-width: 800px) {
+            font-size: 1em;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.popup#success-popup
+    .popup-main
+        button.close(type="button" data-fancybox-close)
+            svg(width="27" height="27")
+                use(xlink:href='img/sprite.svg#sprite-popup-close')
+        svg(width="160" height="160")
+            use(xlink:href='img/sprite.svg#sprite-success-check-mark')
+        p.popup__title Вашe сообщение успешно отправлено
+        p Спасибо, мы свяжемся с вами в ближайшее время
+        button.btn.btn--light-blue-outline.popup__button(type="button" data-fancybox-close) Закрыть

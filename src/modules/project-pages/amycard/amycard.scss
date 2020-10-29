@@ -1,0 +1,204 @@
+.amycard {
+  padding-top: 21px;
+  margin-bottom: 82px;
+
+  @media (max-width: 800px) {
+    padding-top: 2px;
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    margin-top: 82px;
+    margin-bottom: 44px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 800px) {
+      margin-top: 31px;
+      margin-bottom: 31px;
+    }
+
+    &-icon {
+      width: 264px;
+      height: 43px;
+
+      @media (max-width: 800px) {
+        width: 216px;
+        height: 35px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__description {
+
+    p {
+
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $color-black;
+      margin-top: 99px;
+
+      @media (max-width: 800px) {
+        margin-top: 39px;
+        font-size: 0.666em;
+        line-height: 1.33em;
+      }
+    }
+
+    &-block {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 40px;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+      }
+
+      a {
+
+        display: none;
+        font-size: 1.111em;
+        height: 56px;
+        width: 400px;
+
+        @media (max-width: 800px) {
+          line-height: 0.888em;
+          font-size: 0.666em;
+          height: 40px;
+          width: 100%;
+        }
+      }
+
+      &-info {
+        font-family: Roboto Mono, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.777em;
+        line-height: 1em;
+        text-align: right;
+        text-transform: uppercase;
+        color: $color-alto;
+        //width: 34.572%;
+
+        @media (max-width: 800px) {
+          width: 100%;
+          font-size: 0.666em;
+          line-height: 1.33em;
+          margin-top: 16px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__plot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+
+    @media (max-width: 1150px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 24px;
+    }
+    &-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 460px;
+      position: relative;
+
+      @media (max-width: 1150px) {
+        width: 100%;
+      }
+
+      &:first-of-type {
+        align-items: flex-start;
+      }
+
+      span {
+        border-top: 52px solid transparent;
+        border-left: 104px solid #fff;
+        border-bottom: 52px solid transparent;
+        position: absolute;
+        cursor: pointer;
+
+        @media (max-width: 800px) {
+          border-top: 20px solid transparent;
+          border-left: 40px solid #fff;
+          border-bottom: 20px solid transparent;
+        }
+      }
+
+      &-video {
+        width: 100%;
+        cursor: pointer;
+      }
+
+      &:last-of-type {
+        width: 660px;
+        height: 320px;
+
+        @media (max-width: 1150px) {
+          width: 100%;
+          margin-top: 24px;
+          height: auto;
+        }
+
+        .amycard__plot-block-video-js {
+          display: flex;
+          justify-content: center;
+          border: none;
+          align-items: center;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        font-family: Roboto Mono, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.777em;
+        line-height: 1.25em;
+        text-transform: uppercase;
+        color: $color-san-marino;
+        margin-bottom: 15px;
+
+        @media (max-width: 800px) {
+          font-size: 0.888em;
+          line-height: 1.33em;
+        }
+      }
+
+      &-info{
+        font-family: 'Roboto Mono', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: $color-black;
+
+        @media (max-width: 800px) {
+          width: 100%;
+          font-size: 0.666em;
+          line-height: 1.33em;
+        }
+      }
+    }
+  }
+}

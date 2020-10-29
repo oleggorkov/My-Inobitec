@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+include ../../modules/header/header
+
+block variables
+    -
+        var title = "Inobitec";
+
+block header
+    +header()
+
+block content
+    .main-container.header-margin-inner
+        .content
+            p Главная страница
+
+        include ../../modules/footer/footer

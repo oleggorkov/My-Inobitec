@@ -1,0 +1,56 @@
+.distributor-questionnaire#distributor-questionnaire
+    .wr
+        h2 Анкета дистрибьютора
+
+        form(action="/distribution/" method="POST")
+            .input.distributor-questionnaire__full-name
+                label(for="full-name") Как к Вам можно обращаться?
+                input(type="text" name="full-name" id="full-name" placeholder="Ваше ФИО")
+
+            .input.distributor-questionnaire__phone.js-phone-input
+                label(for="phone") Номер телефона для связи
+                    span *
+                input(type="tel" name="phone" id="phone" data-pattern="\\+[0-9]{11}" data-msg="Поле заполнено не верно" minlength="12" placeholder="+___________" inputmode="numeric" required)
+
+            .input.distributor-questionnaire__email.js-email-input
+                label(for="email") Адрес электронной почты
+                input(type="email" name="email" id="email" data-msg="Поле заполнено не верно" placeholder="example@email.com" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}")
+
+            .input.distributor-questionnaire__organization-name
+                label(for="organization-name") Название организации
+                input(type="text" name="organization-name" id="organization-name")
+
+            .input.distributor-questionnaire__message
+                label(for="message") Расскажите о своей компании
+                    span *
+                textarea(name="message" id="message" rows="6" data-msg="Заполните обязательное поле" placeholder="Подробно опишите свою компанию. Количество сотрудников и т.п." required)
+
+            .select.distributor-questionnaire__products
+                label В поставке каких продуктов Вы заинтересованы?
+                .select__container.distributor-questionnaire__products-container.js-custom-select.js-questionnaire-product-select
+                    select(name="products")
+                        option(disabled selected) Выберите из списка
+                        option(value="lite") Инобитек DICOM-Просмотрщик Lite
+                        option(value="pro") Инобитек DICOM-Просмотрщик Pro
+                        option(value="web") Инобитек Web DICOM-Просмотрщик
+                        option(value="server") Инобитек DICOM-Сервер
+                    svg(width="32" height="32")
+                        use(xlink:href='img/sprite.svg#sprite-select-arrow')
+
+                button.btn.btn--light-blue-outline.distributor-questionnaire__add-button.js-add-select-button(type="button")
+                    span Добавить еще
+
+            .input.distributor-questionnaire__licenses-number.js-number-input
+                label(for="licenses-number") На продажу какого количества лицензий в&nbsp;течение 1 года Вы ориентированы?
+                .distributor-questionnaire__number-container
+                    input(type="text" name="licenses-number" id="licenses-number" minlength="1" maxlength="3" placeholder="100" inputmode="numeric")
+                    span шт
+
+            p.distributor-questionnaire__agreement
+                | Отправляя сообщение посредством размещенной выше формы обратной связи, вы автоматически даете своё согласие на обработку ваших персональных данных в соответствии с законом № 152-ФЗ «О персональных данных» от 27.07.2006, принимаете условия 
+                a.link.link--blue(href="https://inobitec.ru/about/agreement-for-the-processing-of-personal-data.php") Согласия на обработку персональных данных
+                |  и подтверждаете факт своего ознакомления с 
+                a.link.link--blue(href="https://inobitec.ru/about/privacypolicy.php") Политикой конфиденциальности
+                | .
+
+            button.btn.btn--light-blue-filled.distributor-questionnaire__button(type="submit") Отправить анкету

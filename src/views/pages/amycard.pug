@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+include ../../modules/header/header
+
+block variables
+    -
+        var title = "Amycard"
+
+block header
+    +header("Amycard")
+
+block content
+    .main-container.header-margin-inner
+        .content
+            include ../../modules/project-pages/amycard/amycard
+
+        include ../../modules/footer/footer

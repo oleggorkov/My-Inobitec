@@ -1,0 +1,179 @@
+.support-form#support-form
+    .wr
+        .support-form__title
+            svg(width="80" height="80")
+                use(xlink:href='img/sprite.svg#sprite-question')
+            h2 Задать вопрос или сообщить о проблеме
+
+        .support-form__toggle
+            .support-form__radio
+                input.visually-hidden(type="radio" name="message-type" id="question" value="question" checked)
+                label(for="question") Задать вопрос
+            .support-form__radio
+                input.visually-hidden(type="radio" name="message-type" id="issue" value="issue")
+                label(for="issue") Сообщить о проблеме
+
+        .support-form__question-form.js-question-form.is-open
+            form(action="/support/" method="POST" enctype="multipart/form-data")
+                .input.support-form__full-name
+                    label(for="question-full-name") Как к Вам можно обращаться?
+                        span *
+                    input(type="text" name="question-full-name" id="question-full-name" data-msg="Заполните обязательное поле" placeholder="Ваше ФИО" required)
+
+                .input.support-form__phone.js-phone-input
+                    label(for="question-phone") Номер телефона для связи
+                    input(type="tel" name="question-phone" id="question-phone" data-pattern="\\+[0-9]{11}" data-msg="Поле заполнено не верно" minlength="12" placeholder="+___________" inputmode="numeric" parrern="+[0-9()-.^+\/*%^]")
+
+                .input.support-form__email.js-email-input
+                    label(for="question-email") Адрес электронной почты
+                        span *
+                    input(type="email" name="question-email" id="question-email" data-msg="Поле заполнено не верно"
+                        placeholder="example@email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+
+                .input.support-form__organization-name
+                    label(for="question-organization-name") Название организации
+                    input(type="text" name="question-organization-name" id="question-organization-name" placeholder="ООО «Название»")
+
+                .input.support-form__message
+                    label(for="question-message") Какой у Вас вопрос?
+                        span *
+                    textarea(name="question-message" id="question-message" rows="2" data-msg="Заполните обязательное поле" placeholder="Ваш вопрос" required)
+                    div.counter-block
+                        span(id='counter')
+                        span(id='max-symbols')
+
+                .file-input.support-form__file.js-file-input
+                    .file-input__title Прикрепите файл
+                    .file-input__subtitle Вы можете прикрепить скриншот, фото, pdf файл с описанием или&nbsp;видео файл
+                    .file-input__container
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+
+                p.support-form__agreement
+                    | Отправляя сообщение посредством размещенной выше формы обратной связи, вы автоматически даете своё согласие на обработку ваших персональных данных в соответствии с законом № 152-ФЗ «О персональных данных» от 27.07.2006, принимаете условия 
+                    a.link.link--blue(href="https://inobitec.ru/about/agreement-for-the-processing-of-personal-data.php") Согласия на обработку персональных данных
+                    |  и подтверждаете факт своего ознакомления с 
+                    a.link.link--blue(href="https://inobitec.ru/about/privacypolicy.php") Политикой конфиденциальности
+                    | .
+
+                button.btn.btn--light-blue-filled.support-form__button(type="submit") Задать вопрос
+
+        .support-form__issue-form.js-issue-form
+            form(action="/support/" method="POST" enctype="multipart/form-data")
+                .input.support-form__full-name
+                    label(for="issue-full-name") Как к Вам можно обращаться?
+                        span *
+                    input(type="text" name="issue-full-name" id="issue-full-name" data-msg="Заполните обязательное поле" placeholder="Ваше ФИО" required)
+
+                .select.support-form__product
+                    label(for="issue-product-select") С каким продуктом у Вас возникли проблемы?
+                        span *
+                    .select__container.js-custom-select.js-issue-product-select
+                        select(name="issue-product" id="issue-product-select" data-msg="Выберите продукт" required)
+                            option(disabled selected) Выберите из списка
+                            option(value="lite") Инобитек DICOM-Просмотрщик Lite
+                            option(value="pro") Инобитек DICOM-Просмотрщик Pro
+                            option(value="web") Инобитек Web DICOM-Просмотрщик
+                            option(value="server" data-multicolor="true") Инобитек DICOM-Сервер
+                        svg(width="32" height="32")
+                            use(xlink:href='img/sprite.svg#sprite-select-arrow')
+
+                .input.support-form__organization-name
+                    label(for="issue-organization-name") Название организации
+                        span *
+                    input(type="text" name="issue-organization-name" id="issue-organization-name" data-msg="Заполните обязательное поле" placeholder="ООО «Название»" required)
+
+                .select.support-form__version
+                    label(for="issue-version-select") Версия, редакция
+                        span *
+                    .select__container.js-custom-select.js-version-select.is-disabled
+                        select(name="issue-version" id="issue-version-select" data-msg="Выберите версию" data-product-versions="static/data/product-versions.json" required)
+                            option(disabled selected) Выберите из списка
+                        svg(width="32" height="32")
+                            use(xlink:href='img/sprite.svg#sprite-select-arrow')
+
+                .input.support-form__email.js-email-input
+                    label(for="issue-email") Адрес электронной почты
+                        span *
+                    input(type="email" name="issue-email" id="issue-email" data-msg="Поле заполнено не верно"
+                        placeholder="example@email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+
+                .input.support-form__os-version
+                    label(for="issue-os-version") Версия и разрядность операционной системы
+                        span *
+                        span.tooltip.support-form__tooltip ?
+                            span.tooltip__popup
+                                a.link.link--blue(href="http://help.inobitec.com/kb/faq.php?id=52" target="_blank") Как узнать?
+                    input(type="text" name="issue-os-version" id="issue-os-version" data-msg="Заполните обязательное поле" placeholder="Например: macOS Mojave, 10.14.3 (18D109)" required)
+
+                .input.support-form__phone.js-phone-input
+                    label(for="issue-phone") Номер телефона для связи
+                    input(type="tel" name="issue-phone" id="issue-phone" data-pattern="\\+[0-9]{11}" data-msg="Поле заполнено не верно" minlength="12" placeholder="+___________" inputmode="numeric")
+
+                .input.support-form__code.js-code-input
+                    label(for="issue-code") Код продукта
+                        span *
+                        span.tooltip.support-form__tooltip ?
+                            span.tooltip__popup
+                                a.link.link--blue(href="http://help.inobitec.com/kb/faq.php?id=52" target="_blank") Как узнать?
+                    input(type="text" name="issue-code" id="issue-code" data-pattern="[0-9]{4}\\-[0-9]{4}\\-[0-9]{4}\\-[0-9]{4}" data-msg="Поле заполнено не верно" placeholder="0000-0000-0000-0000" inputmode="numeric" required)
+
+                .file-input.support-form__file.js-file-input
+                    .file-input__title Прикрепите файл
+                    .file-input__subtitle Вы можете прикрепить скриншот, фото, pdf файл с описанием или&nbsp;видео файл
+                    .file-input__container
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+                        .file-input__item
+                            label(aria-label="Прикрепить файл")
+                                input.visually-hidden(type="file" name="file")
+                            button.file-input__remove-button(type="button" aria-label="Удалить файл")
+
+                .input.support-form__message
+                    label(for="issue-message") Краткое описание проблемы
+                        span *
+                    textarea(name="issue-message" id="issue-message" rows="2" data-msg="Заполните обязательное поле" placeholder="Опишите проблему, с которой Вы столкнулись" required)
+                    div.counter-block
+                        span(id='counter-problem')
+                        span(id='max-symbols-problem')
+
+                p.support-form__agreement
+                    | Отправляя сообщение посредством размещенной выше формы обратной связи, вы автоматически даете своё согласие на обработку ваших персональных данных в соответствии с законом № 152-ФЗ «О персональных данных» от 27.07.2006, принимаете условия 
+                    a.link.link--blue(href="https://inobitec.ru/about/agreement-for-the-processing-of-personal-data.php") Согласия на обработку персональных данных
+                    |  и подтверждаете факт своего ознакомления с 
+                    a.link.link--blue(href="https://inobitec.ru/about/privacypolicy.php") Политикой конфиденциальности
+                    | .
+
+                button.btn.btn--light-blue-filled.support-form__button(type="submit") Отправить

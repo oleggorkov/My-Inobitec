@@ -1,0 +1,15 @@
+section.programming-languages
+    .wr
+        h2 Языки программирования и технологии
+        p Благодаря накопленному опыту разработки программного обеспечения на заказ специалисты Инобитек развили компетенции в наиболее популярных языках программирования и технологиях разработки.
+
+        .programming-languages__container.js-programming-languages-container
+            .programming-languages__list
+                -var languages = [{url:'python', name:'Python'}, {url:'c-plusplus', name:'C++'}, {url:'c-sharp', name:'C#'}, {url:'java', name:'Java'}, {url:'javascript', name:'JavaScript'}, {url:'react', name:'React'}, {url:'nodejs', name:'Node.js'}, {url:'angular', name:'Angular'}, {url:'rust', name:'Rust'}, {url:'scala', name:'Scala'}, {url:'go', name:'Go'}, {url:'sql', name:'Sql'}, {url:'qt', name:'Qt'}, {url:'objective-c', name:'Objective-C'},  ]
+                each item in languages
+                    .programming-languages__item
+                        .programming-languages__logo
+                            img.programming-languages__logo-img.img.programming-languages__logo-img--monochrome(src='img/sprite-icons/' + item.url + '-monochrome.svg')
+                            img.programming-languages__logo-img.img.programming-languages__logo-img--full-color(src='img/sprite-icons/' + item.url + '.svg')
+                        span #{item.name}
+        button.btn.btn--light-blue-outline.programming-languages__button.js-programming-languages-button(type="button") Ещё

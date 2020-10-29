@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+include ../../modules/header/header
+
+block variables
+    -
+        var title = "Vitaworks"
+
+block header
+    +header("Vitaworks")
+
+block content
+    .main-container.header-margin-inner
+        .content
+            include ../../modules/project-pages/vitaworks/vitaworks
+
+        include ../../modules/footer/footer

@@ -1,0 +1,25 @@
+//import vendor
+@import "../../node_modules/vanilla-js-dropdown/vanilla-js-dropdown";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+//import main styles
+@import "helpers/mixins";
+@import "helpers/colors";
+@import "helpers/vars";
+@import "base/media";
+@import "base/general";
+@import "base/fonts";
+@import "base/global-classes";
+
+//import utils
+@import "helpers/typography";
+@import "helpers/animations";
+@import "helpers/grid";
+
+//import modules
+@import "../modules/modules";
+
+
+
+

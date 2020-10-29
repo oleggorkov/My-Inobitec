@@ -1,0 +1,91 @@
+.accordion {
+    border-bottom: 2px solid $color-alto;
+
+    &:first-child {
+        border-top: 2px solid $color-alto;
+    }
+
+    &__header {
+        position: relative;
+        padding: 39px 100px 42px 0;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.777em;
+        line-height: 1.25em;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-san-marino;
+        transition: color 0.2s ease;
+        cursor: pointer;
+
+        @media (max-width: 800px) {
+            padding: 15px 40px 20px 0;
+            font-size: 0.888em;
+            line-height: 1.5em;
+        }
+
+        @media (min-width: 1000px) {
+            &:hover {
+                color: $color-black;
+    
+                svg {
+                    stroke: $color-black;
+                }
+            }
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            stroke: $color-havelock-blue;
+            transition: stroke 0.2s ease, transform 0.5s ease;
+            cursor: pointer;
+
+            @media (max-width: 800px) {
+                top: 13px;
+                transform: translateY(0);
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &.is-open {
+            color: $color-black;
+            
+            svg {
+                stroke: $color-black;
+                transform: translateY(-50%) rotate(180deg);
+
+                @media (max-width: 800px) {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        font-family: 'Roboto Mono', monospace;
+        color: $color-black;
+
+        p {
+            margin-top: 0;
+            margin-bottom: 56px;
+            padding-right: 70px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.111em;
+            line-height: 1.6em;
+
+            @media (max-width: 800px) {
+                margin-bottom: 32px;
+                padding-right: 0;
+                font-size: 0.666em;
+                line-height: 1.33em;
+            }
+        }
+    }
+}

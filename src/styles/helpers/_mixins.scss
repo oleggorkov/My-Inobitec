@@ -1,0 +1,10 @@
+@mixin above($width, $orientation: 'width') {
+  @media all and (min-#{$orientation}: $width) {
+    @content;
+  }
+}
+
+@mixin padding-x($size) {
+  padding-left: $size;
+  padding-right: $size;
+}

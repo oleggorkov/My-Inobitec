@@ -1,0 +1,18 @@
+.services-bottom {
+    margin-bottom: 62px;
+
+    @media (max-width: 800px) {
+        margin-bottom: 0;
+    }
+
+    .wr {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 24px;
+        padding-right: 24px;
+    
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
+}

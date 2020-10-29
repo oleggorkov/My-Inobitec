@@ -1,0 +1,19 @@
+.distribution-conditions {
+    margin-bottom: 81px;
+
+    @media (max-width: 800px) {
+        margin-bottom: 40px;
+    }
+    
+    &__list {
+        li {
+            &:last-child {
+                margin-bottom: 48px;
+
+                @media (max-width: 800px) {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}

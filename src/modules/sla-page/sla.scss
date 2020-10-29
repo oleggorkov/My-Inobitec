@@ -1,0 +1,27 @@
+.sla {
+    padding-top: 21px;
+    margin-bottom: 82px;
+
+    @media (max-width: 800px) {
+        padding-top: 2px;
+        margin-bottom: 0;
+    }
+
+    &__section-header {
+        margin-top: 32px;
+        margin-bottom: 44px;
+
+        @media (max-width: 800px) {
+            margin-top: 11px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__list {
+        padding-left: 199px;
+
+        @media (max-width: 800px) {
+            padding-left: 0;
+        }
+    }
+}

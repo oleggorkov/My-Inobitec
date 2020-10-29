@@ -1,0 +1,23 @@
+extends ../layouts/default
+
+include ../../modules/header/header
+
+block variables
+    -
+        var title = "Услуги";
+
+block header
+    +header("Услуги")
+
+block content
+    .main-container.header-margin-inner
+        .content
+            include ../../modules/services-page/completed-projects/completed-projects
+            include ../../modules/services-page/programming-languages/programming-languages
+            include ../../modules/services-page/services/services
+            .services-bottom
+                .wr
+                    include ../../modules/services-page/certificates/certificates
+                    include ../../modules/services-page/task-assessment/task-assessment
+
+        include ../../modules/footer/footer

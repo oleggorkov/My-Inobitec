@@ -1,0 +1,23 @@
+section.amycard
+    .wr
+        a.link.link--blue.link--back(href="services.html")
+            svg(width="19" height="8")
+                use(xlink:href='img/sprite.svg#sprite-link-arrow')
+            | К списку проектов
+
+        .amycard__logo
+            .amycard__logo-icon
+                img(src='img/amycard.png' alt='logo')
+        .amycard__description
+            p Компания «Амикард» и партнеры успешно продвигают на рынке неинвазивную электрофизиологическую систему для диагностики различных аритмий сердца. Соответствующий программный функционал, интегрированный в аппаратный комплекс, полностью разрабатывается и поддерживается нашей компанией.
+            .amycard__description-block
+                a(href='#').btn.btn--light-blue-outline Особенности проекта
+                .amycard__description-block-info Технические детали не разглашаются согласно подписанным соглашениям
+        .amycard__plot
+            .amycard__plot-block
+                h2 Сюжет Первого канала
+                .amycard__plot-block-info Восстановление работы сердца после мерцательной аритмии без серьезного хирургического вмешательства
+            .amycard__plot-block
+                a(data-fancybox href="https://www.youtube.com/watch?v=CMjRjjlb4Xs;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0").amycard__plot-block-video-js
+                    img(src='img/first.png' alt='1st-channel-video')
+                    span

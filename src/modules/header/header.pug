@@ -1,0 +1,101 @@
+mixin header(title)
+    header.headerNew.headerNew-bg.ng-scope(ng-controller="basketHeaderController")
+        .headerNew-wrapper
+            .headerNew-container
+                a.headerNew-container-logo(href="/" title="На главную")
+                    img(src="img/logo-white.svg" alt="Инобитек")
+                .headerNew-container-languages
+                    p.active rus
+                    a(href="/eng") eng
+
+            nav.headerNew-nav
+                span.headerNew-nav-line
+                ul.headerNew-nav-list
+                    li
+                        a(href="/about/mission/") Компания
+                    li
+                        a.act(href="/services/") Услуги
+                    li
+                        a(href="/products/") Продукты	
+                    li
+                        a(href="/downloads/") Загрузки
+                    li
+                        a(href="/support/") Поддержка
+                    li
+                        a(href="/buy/") Купить
+                .headerNew-nav-icons
+                    a(href="/personal/" title="Личный кабинет")
+                        img(src="img/sprite-icons/user.svg" alt="")
+                    .headerNew-nav-icons-basket(ng-init="site='s1'; initCart()")
+                        img(src="img/sprite-icons/basket.svg" title="Корзина" alt="")
+                        span.headerNew-nav-icons-basket-counter.ng-binding 0
+                        .headerNew-basket
+                            .headerNew-basket_title
+                                p 
+                                    | Корзина 
+                                    br
+                                    span.ng-binding Наименований: 0
+                                a.ng-hide(href="/cart/" ng-show="calculateProductsNum() > 0") Перейти в корзину
+                            .headerNew-basket_products
+                                .headerNew-basket_products-product
+                                    a.headerNew-basket_products-product-title.ng-hide(href="/buy/dicomviewer/" ng-show="checkIfViewerInBasket()") Просмотрщик
+                                a.headerNew-basket_products-product-title.ng-hide(href="/buy/dicomserver/" ng-show="serverRedaction") сервер
+                                .ng-hide(ng-show="serverRedaction")
+                                    .headerNew-basket_products-product-container.product-active-cross
+                                        p.pro.product-name.ng-binding
+                                            | SERVER, Подключения:  
+                                            span.black-bold x1
+                                        p.price.ng-binding ₽
+                                        svg(ng-click="delServerFromBasket($event)" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                            rect(x="10.0791" width="1.67695" height="14.2541" transform="rotate(45 10.0791 0)" fill="#C7C7C7")
+                                            rect(x="11.8579" y="10.0792" width="1.67695" height="14.2541" transform="rotate(135 11.8579 10.0792)" fill="#C7C7C7")
+                                    .headerNew-basket_products-product-container.product-active-bg.product-active-cross.ng-hide(ng-show="serverRedaction.license.inbasket")
+                                        p.black.product-name Подписка на обновления
+                                        p.price.ng-binding ₽
+                                        svg(ng-click="defaultDelGood(serverRedaction.license)" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                            rect(x="10.0791" width="1.67695" height="14.2541" transform="rotate(45 10.0791 0)" fill="#C7C7C7")
+                                            rect(x="11.8579" y="10.0792" width="1.67695" height="14.2541" transform="rotate(135 11.8579 10.0792)" fill="#C7C7C7")
+                                p.headerNew-basket_products-product-title.ng-hide(ng-show="licenseUpdateViewerCount() > 0 || newServConn.inbasket") Продление лицензий
+                                .ng-hide(ng-show="newServConn.inbasket")
+                                    .headerNew-basket_products-product-container.product-active-cross
+                                        p.black.product-name.ng-binding Доп.подключения для Server: + 
+                                            span.black-bold x1
+                                        p.price.ng-binding ₽
+                                        svg(ng-click="delProFromBasket($event, newServConn.updateLic)" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                            rect(x="10.0791" width="1.67695" height="14.2541" transform="rotate(45 10.0791 0)" fill="#C7C7C7")
+                                            rect(x="11.8579" y="10.0792" width="1.67695" height="14.2541" transform="rotate(135 11.8579 10.0792)" fill="#C7C7C7")
+                            .headerNew-basket_price.ng-hide(ng-show="calculateProductsNum() > 0")
+                                p 
+                                    | итого 
+                                    span.ng-binding 0 ₽
+                                button.btn-blue(ng-click="redirect('/cart/')") Перейти в корзину
+                    a(href="/search/" title="Поиск")
+                        img(src="img/sprite-icons/search.svg" alt="")
+                .headerNew-nav-lines
+                    span
+                    span
+                    span
+
+            .headerNew-mobile-toggle
+                span
+                span
+                span
+
+        ul.headerNew-nav-list.sub-list
+            li
+                a(href="/about/mission/") Компания
+            li
+                a.act(href="/services/") Услуги
+            li
+                a(href="/products/") Продукты
+            li
+                a(href="/downloads/") Загрузки
+            li
+                a(href="/support/") Поддержка
+            li
+                a(href="/buy/") Купить
+
+        if title
+            h1.headerNew-list-title= title
+
+        span.headerNew-basket-mask

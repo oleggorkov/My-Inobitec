@@ -1,0 +1,65 @@
+section.vitaworks
+    .wr
+        a.link.link--blue.link--back(href="services.html")
+            svg(width="19" height="8")
+                use(xlink:href='img/sprite.svg#sprite-link-arrow')
+            | К списку проектов
+
+        .vitaworks__logo
+            .vitaworks__logo-icon
+                img(src='img/vitaworks-card-logo.png' alt='logo')
+        .vitaworks__info
+            p Это портал, с помощью которого врачи формируют задания на построение объемных реконструкций органов или тканей. Специалисты Vitaworks создают 3D-модели органов тела размером 1:1 и предоставляют ссылки для работы с ними.
+        .vitaworks__body
+            .vitaworks__body-icon
+                img(src='img/lung.png' alt='lung')
+            .vitaworks__body-icon
+                img(src='img/chest.png' alt='chest')
+        .vitaworks__process
+            .vitaworks__process-block
+                .vitaworks__process-item
+                    .vitaworks__process-item-block
+                        img(src='img/mri.png' alt='mri')
+                        .vitaworks__process-item-block-info
+                            span 1
+                            div
+                                h2 Шаг первый
+                                p Пациент делает тонкослойное КТ или МРТ сканирование
+                    .vitaworks__process-item-arrow
+                .vitaworks__process-item
+                    .vitaworks__process-item-block
+                        img(src='img/xray.png' alt='xray')
+                        .vitaworks__process-item-block-info
+                            span 2
+                            div
+                                h2 Шаг второй
+                                p Данные DICOM отправляются на Vitaworks
+                    .vitaworks__process-item-arrow-next
+            .vitaworks__process-block
+                .vitaworks__process-item
+                    .vitaworks__process-item-block
+                        img(src='img/ai.png' alt='ai')
+                        .vitaworks__process-item-block-info
+                            span 3
+                            div
+                                h2 Шаг третий
+                                p Алгоритм интеллектуального распознавания Vitaworks визуализирует органы
+                    .vitaworks__process-item-arrow
+                .vitaworks__process-item
+                    .vitaworks__process-item-block
+                        img(src='img/3d.png' alt='3d')
+                        .vitaworks__process-item-block-info
+                            span 4
+                            div
+                                h2 Шаг четвертый
+                                p Создаются 3D-модели органов тела пациента размером 1:1
+                    .vitaworks__process-item-arrow-next
+            .vitaworks__process-block
+                .vitaworks__process-item
+                    .vitaworks__process-item-block
+                        img(src='img/3d-cloud.png' alt='3d-cloud')
+                        .vitaworks__process-item-block-info
+                            span 5
+                            div
+                                h2 Шаг пятый
+                                p Создается ссылка для скачивания и просмотра модели в облачном сервисе

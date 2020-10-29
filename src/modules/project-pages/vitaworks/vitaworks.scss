@@ -1,0 +1,501 @@
+.vitaworks {
+  padding-top: 21px;
+  margin-bottom: 82px;
+
+  @media (max-width: 800px) {
+    padding-top: 2px;
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    margin-top: 35px;
+    margin-bottom: 51px;
+
+    @media (max-width: 800px) {
+      margin-top: 31px;
+      margin-bottom: 31px;
+    }
+
+    &-icon {
+      width: 157px;
+      height: 138px;
+
+      @media (max-width: 800px) {
+        width: 101px;
+        height: 88px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__info {
+
+    p {
+
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $color-black;
+      margin-top: 0;
+      margin-bottom: 56px;
+
+      @media (max-width: 800px) {
+        margin-top: 39px;
+        font-size: 0.666em;
+        line-height: 1.33em;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      margin-bottom: 49px;
+    }
+
+    &-icon {
+
+      img {
+        width: 100%;
+      }
+
+      &:first-child {
+        width: 465px;
+        height: 609px;
+        margin-right: 20px;
+
+        @media (max-width: 800px) {
+          width: 58%;
+          height: auto;
+        }
+      }
+
+      &:last-child {
+        width: 665px;
+        height: auto;
+        margin-top: 100px;
+
+        @media (max-width: 800px) {
+          width: 63%;
+          height: auto;
+          margin-top: 16px;
+          align-self: flex-end;
+        }
+
+        @media (max-width: 500px) {
+          width: 192px;
+          height: 226px;
+          margin-top: 16px;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  &__process {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &-block {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+      }
+
+      &:nth-child(2) {
+        margin-top: -112px;
+
+        @media (max-width: 1050px) {
+          margin-top: -180px;
+        }
+
+        @media (max-width: 800px) {
+          margin-top: 20px;
+        }
+
+        & .vitaworks__process-item:last-child {
+          margin-top: 239px;
+
+          @media (max-width: 800px) {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-top: -111px;
+
+        @media (max-width: 1050px) {
+          margin-top: -180px;
+        }
+
+        @media (max-width: 800px) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      width: 39.76%;
+      height: 465px;
+      position: relative;
+
+      @media (max-width: 800px) {
+        height: auto;
+        width: 88.24%;
+        position: static;
+      }
+
+      &:nth-child(2n) {
+        margin-top: 239px;
+
+        @media (max-width: 800px) {
+          margin-top: 20px;
+          margin-left: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-top: -117px;
+      }
+
+      &:nth-child(4) {
+        margin-top: 122px;
+      }
+
+      &:nth-child(5) {
+        margin-top: -112px;
+      }
+
+      &-arrow {
+        width: 320px;
+        height: 92px;
+        border-right: 2px solid $color-san-marino;
+        border-top: 2px solid $color-san-marino;
+        position: absolute;
+        left: 98.23%;
+        top: 140px;
+        z-index: 5;
+
+        @media (max-width: 800px) {
+          width: 11.76%;
+          height: 270px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 300px;
+        }
+
+        @media (max-width: 550px) {
+          width: 11.76%;
+          height: 270px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 140px;
+        }
+
+        @media (max-width: 375px) {
+          width: 11.76%;
+          height: 180px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 140px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: $color-san-marino;
+          top: -9px;
+
+          @media (max-width: 800px) {
+            width: 7px;
+            height: 7px;
+            top: -4px;
+            right: -4px;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: $color-san-marino;
+          right: -9px;
+          top: 90px;
+
+          @media (max-width: 800px) {
+            width: 7px;
+            height: 7px;
+            top: 265px;
+            right: -4px;
+          }
+
+          @media (max-width: 375px) {
+            width: 7px;
+            height: 7px;
+            top: 174px;
+            right: -4px;
+          }
+        }
+      }
+
+      &-arrow-next {
+        width: 346px;
+        height: 99px;
+        border-left: 2px solid $color-san-marino;
+        border-top: 2px solid $color-san-marino;
+        position: absolute;
+        left: -347px;
+        top: 255px;
+        z-index: 5;
+        border-right: 0;
+
+        @media (max-width: 1050px) {
+          width: 346px;
+          height: 99px;
+          border-left: 2px solid $color-san-marino;
+          border-top: 2px solid $color-san-marino;
+          position: absolute;
+          left: -347px;
+          top: 187px;
+          z-index: 5;
+          border-right: 0;
+        }
+
+        @media (max-width: 800px) {
+          width: 11.76%;
+          height: 270px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 850px;
+        }
+
+        @media (max-width: 725px) {
+          width: 11.76%;
+          height: 375px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 665px;
+        }
+
+        @media (max-width: 550px) {
+          width: 11.76%;
+          height: 270px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 560px;
+        }
+
+        @media (max-width: 450px) {
+          width: 11.76%;
+          height: 270px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 430px;
+        }
+
+        @media (max-width: 375px) {
+          width: 11.76%;
+          height: 180px;
+          border-right: none;
+          border-left: 1px solid $color-san-marino;
+          border-top: 1px solid $color-san-marino;
+          border-bottom: 1px solid $color-san-marino;
+          left: 0;
+          top: 418px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: $color-san-marino;
+          top: 88px;
+          left: -9px;
+
+          @media (max-width: 800px) {
+            width: 7px;
+            height: 7px;
+            top: -4px;
+            left: 95%;
+          }
+
+          @media (max-width: 550px) {
+            width: 7px;
+            height: 7px;
+            top: -4px;
+            left: 92%;
+          }
+
+          @media (max-width: 375px) {
+            width: 7px;
+            height: 7px;
+            top: -4px;
+            left: 89%;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: $color-san-marino;
+          right: -9px;
+          top: -9px;
+
+          @media (max-width: 800px) {
+            width: 7px;
+            height: 7px;
+            top: 265px;
+            right: -4px;
+          }
+
+          @media (max-width: 725px) {
+            width: 7px;
+            height: 7px;
+            top: 370px;
+            right: -4px;
+          }
+
+          @media (max-width: 550px) {
+            width: 7px;
+            height: 7px;
+            top: 265px;
+            right: -4px;
+          }
+
+          @media (max-width: 375px) {
+            width: 7px;
+            height: 7px;
+            top: 174px;
+            right: -4px;
+          }
+        }
+      }
+
+      &-block {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 800px) {
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        &-info {
+          display: flex;
+
+          @media (max-width: 1050px) {
+            margin-top: 16px;
+          }
+
+          span {
+            margin-right: 5px;
+            font-family: Roboto Mono, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 8em;
+            line-height: 1em;
+            text-transform: uppercase;
+            color: $color-wild-sand;
+
+            @media (max-width: 1050px) {
+              font-size: 4em;
+              line-height: 0.8em;
+            }
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: normal;
+
+            @media (max-width: 1050px) {
+              justify-content: center;
+            }
+
+            h2 {
+              font-family: Roboto Mono, sans-serif;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 1.777em;
+              line-height: 2.222em;
+              text-transform: uppercase;
+              margin: 0;
+              color: $color-san-marino;
+
+              @media (max-width: 1050px) {
+                font-size: 0.888em;
+                line-height: 1.333em;
+              }
+            }
+
+            p {
+              font-family: Roboto Mono, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 1.111em;
+              line-height: 1.777em;
+              margin: 0;
+
+              @media (max-width: 1050px) {
+                font-size: 0.666em;
+                line-height: 0.888em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

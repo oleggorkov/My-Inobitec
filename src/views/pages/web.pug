@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+include ../../modules/header/header
+
+block variables
+    -
+        var title = "WEB просмотрщик"
+
+block header
+    +header("WEB просмотрщик")
+
+block content
+    .main-container.header-margin-inner
+        .content
+            include ../../modules/project-pages/web/web
+
+        include ../../modules/footer/footer

@@ -1,0 +1,9 @@
+.support-search
+    .wr
+        form(action="http://help.inobitec.com/kb/faq.php" method="GET")
+            .input.support-search__input
+                input(type="text" name="search" id="search" placeholder="Поиск по инструкциям и базе знаний...")
+            button.btn.btn--light-blue-outline.support-search__button(type="submit")
+                span Найти
+                svg(width="20" height="21")
+                    use(xlink:href='img/sprite.svg#sprite-search-blue')

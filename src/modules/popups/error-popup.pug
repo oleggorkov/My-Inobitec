@@ -1,0 +1,10 @@
+.popup#error-popup
+    .popup-main
+        button.close(type="button" data-fancybox-close)
+            svg(width="27" height="27")
+                use(xlink:href='img/sprite.svg#sprite-popup-close')
+        svg(width="160" height="160")
+            use(xlink:href='img/sprite.svg#sprite-error-cross')
+        p.popup__title Что то пошло не так!
+        p Форма не отправлена, попробуйте еще раз
+        button.btn.btn--light-blue-outline.popup__button(type="button" data-fancybox-close) Закрыть

@@ -1,0 +1,84 @@
+.astrocard {
+  padding-top: 21px;
+  margin-bottom: 82px;
+
+  @media (max-width: 800px) {
+    padding-top: 2px;
+    margin-bottom: 0;
+  }
+
+  .wr {
+    h2 {
+      font-family: Roboto Mono, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.777em;
+      line-height: 2.222em;
+      text-transform: uppercase;
+      color: $color-san-marino;
+      margin-top: 0;
+
+      @media (max-width: 800px) {
+        margin-top: 24px;
+        font-size: 0.888em;
+        line-height: 1.33em;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 24px;
+    height: 564px;
+    background: url("../img/heart.png") no-repeat;
+    background-size: contain;
+    background-position-x: right;
+
+    @media (max-width: 800px) {
+      margin-top: 16px;
+      height: 609px;
+      background-position-y: bottom;
+    }
+  }
+
+  &__logo {
+    margin-top: 24px;
+    margin-bottom: 53px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 800px) {
+      margin-top: 31px;
+      margin-bottom: 31px;
+    }
+
+    &-icon {
+      width: 304px;
+      height: 160px;
+
+      @media (max-width: 800px) {
+        width: 176px;
+        height: 93px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-info {
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $color-black;
+      margin-top: 40px;
+
+      @media (max-width: 800px) {
+        margin-top: 39px;
+        font-size: 0.666em;
+        line-height: 1.33em;
+      }
+    }
+  }
+}

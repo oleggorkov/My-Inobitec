@@ -1,0 +1,55 @@
+.support-search {
+    margin-bottom: 40px;
+    padding-top: 56px;
+
+    @media (max-width: 800px) {
+        margin-bottom: 15px;
+        padding-top: 24px;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    &__input {
+        width: 74.138%;
+
+        @media (max-width: 800px) {
+            flex-grow: 1;
+            width: auto;
+            margin-right: 8px;
+        }
+    }
+
+    &__button {
+        width: 22.414%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        @media (max-width: 800px) {
+            width: 40px;
+            height: 40px;
+            min-height: 0;
+            padding: 0;
+            border-width: 1px;
+        }
+
+        span {
+            @media (max-width: 800px) {
+                display: none;
+            }
+        }
+
+        svg {
+            display: none;
+
+            @media (max-width: 800px) {
+                display: block;
+            }
+        }
+    }
+}

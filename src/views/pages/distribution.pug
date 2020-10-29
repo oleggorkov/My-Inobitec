@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+include ../../modules/header/header
+
+block variables
+    -
+        var title = "Дистрибуция";
+
+block header
+    +header("Дистрибуция")
+
+block content
+    .main-container.header-margin-inner
+        .content
+            include ../../modules/distribution-page/distribution-header/distribution-header
+            include ../../modules/distribution-page/distribution-conditions/distribution-conditions
+            include ../../modules/distribution-page/distributor-questionnaire/distributor-questionnaire
+
+        include ../../modules/footer/footer
+
+    include ../../modules/popups/distribution-success-popup
+    include ../../modules/popups/error-popup

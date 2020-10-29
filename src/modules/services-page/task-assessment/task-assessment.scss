@@ -1,0 +1,60 @@
+.task-assessment {
+    width: 48.401%;
+    min-height: 468px;
+    padding: 59px 62px;
+    background-color: $color-havelock-blue;
+
+    @media (max-width: 1000px) {
+        width: auto;
+        min-height: 0;
+    }
+
+    @media (max-width: 800px) {
+        padding: 21px 32px 27px;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 38px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.776em;
+        line-height: 1.27em;
+        text-transform: uppercase;
+        color: $color-white;
+
+        @media (max-width: 800px) {
+            margin-bottom: 13px;
+            font-size: 0.888em;
+            line-height: 1.5em;
+        }
+    }
+
+    p {
+        margin-bottom: 58px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.111em;
+        line-height: 1.6em;
+        color: $color-white;
+
+        @media (max-width: 800px) {
+            margin-bottom: 20px;
+            font-size: 0.666em;
+            line-height: 1.33em;
+        }
+    }
+
+    &__button {
+        display: flex;
+        width: 100%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        @media (max-width: 800px) {
+            min-height: 40px;
+            font-size: 0.666em;
+            line-height: 1.33em;
+        }
+    }
+}

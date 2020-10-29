@@ -1,0 +1,52 @@
+//reset default styles
+// *{
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+
+// html{
+//   font-size: 62.5%;
+//   font-family: 'Roboto Mono', sans-serif;
+
+//   -ms-text-size-adjust: 100%;
+//   -moz-text-size-adjust: 100%;
+//   -webkit-text-size-adjust: 100%;
+// }
+
+// input,textarea,button,input::placeholder{
+//   font-family: 'Roboto Mono', sans-serif;
+// }
+
+// input[type='number']::-webkit-outer-spin-button,
+// input[type='number']::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// a{
+//   text-decoration: none;
+//   transition: color ease 0.25s, background-color ease 0.25s;
+// }
+
+// ul{
+//   list-style: none;
+// }
+
+// svg{
+//   transition: fill ease 0.25s, stroke ease 0.25s;
+// }
+
+// button{
+//   transition: color ease 0.25s;
+// }
+
+iframe {
+    border: none;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+}
+
+//main classes

@@ -1,0 +1,78 @@
+.numedy-dm {
+  padding-top: 21px;
+  margin-bottom: 82px;
+
+  @media (max-width: 800px) {
+    padding-top: 2px;
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    margin-top: 60px;
+
+    @media (max-width: 800px) {
+      margin-top: 31px;
+      margin-bottom: 31px;
+    }
+
+    img {
+      width: 301px;
+      height: 94px;
+    }
+  }
+
+  &__info {
+
+    p {
+
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $color-black;
+      margin-top: 75px;
+      margin-bottom: 0;
+
+      @media (max-width: 800px) {
+        margin-top: 39px;
+        font-size: 0.666em;
+        line-height: 1.33em;
+      }
+    }
+
+    p:last-child {
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $color-black;
+      margin-top: 0;
+
+      @media (max-width: 800px) {
+        font-size: 0.666em;
+        line-height: 1.33em;
+      }
+    }
+  }
+
+  &__process {
+    width: 100%;
+    margin-top: 69px;
+    object-fit: contain;
+
+    @media (max-width: 700px) {
+      margin-top: 29px;
+    }
+
+    @media (max-width: 425px) {
+      margin-top: 16px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,261 @@
+.distributor-questionnaire {
+    padding-top: 56px;
+    padding-bottom: 57px;
+    background-color: rgba($color-havelock-blue, 0.05);
+
+    @media (max-width: 800px) {
+        padding-top: 16px;
+        padding-bottom: 39px;
+    }
+
+    h2 {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 42px;
+        padding-top: 28px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.777em;
+        line-height: 1.25em;
+        text-transform: uppercase;
+        color: $color-black;
+
+        @media (max-width: 800px) {
+            margin-bottom: 12px;
+            padding-top: 18px;
+            font-size: 0.888em;
+            line-height: 1.5em;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 385px;
+            height: 5px;
+            background-color: $color-havelock-blue;
+
+            @media (max-width: 800px) {
+                width: 100%;
+                height: 3px;
+            }
+        }
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 24px;
+        margin: 0;
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 0;
+        }
+    }
+
+    &__full-name {
+        @media (max-width: 800px) {
+            order: 1;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__phone {
+        @media (max-width: 800px) {
+            order: 3;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__email {
+        @media (max-width: 800px) {
+            order: 2;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__organization-name {
+        @media (max-width: 800px) {
+            order: 4;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__message {
+        display: flex;
+        flex-direction: column;
+        grid-row: 3 / 5;
+        align-self: stretch;
+
+        @media (max-width: 800px) {
+            order: 7;
+            margin-bottom: 16px;
+        }
+
+        label {
+            align-self: flex-start;
+        }
+    }
+
+    &__products {
+        @media (max-width: 800px) {
+            order: 5;
+            margin-bottom: 16px;
+        }
+
+        .js-Dropdown-list {
+            background-color: #f6f9fd;
+        }
+    }
+
+    &__products-container {
+        margin-bottom: 24px;
+
+        @media (max-width: 800px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__add-button {
+        display: flex;
+        width: 100%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        @media (max-width: 800px) {
+            min-height: auto;
+            font-size: 0.666em;
+            line-height: 1.33em;        
+        }
+
+        span {
+            position: relative;
+            padding-left: 24px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 2px;
+                background-color: $color-san-marino;
+                transition: background-color 0.2s ease;
+
+                @media (max-width: 800px) {
+                    width: 12px;
+                }
+            }
+
+            &::after {
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            span {
+                &::before,
+                &::after {
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+
+    &__licenses-number {
+        @media (max-width: 800px) {
+            order: 6;
+            margin-bottom: 16px;
+        }
+    }
+
+    input {
+        background-color: transparent;
+    }
+
+    textarea {
+        flex-grow: 1;
+        background-color: transparent;
+    }
+
+    &__number-container {
+        position: relative;
+        width: 118px;
+
+        @media (max-width: 800px) {
+            width: 81px;
+        }
+
+        input[type="text"] {
+            padding-right: 55px;
+
+            @media (max-width: 800px) {
+                padding-right: 40px;
+            }
+        }
+
+        span {
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            margin: 0;
+            font-family: 'Roboto Mono', monospace;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+
+            @media (max-width: 800px) {
+                top: 10px;
+                right: 12px;            
+                font-size: 0.777em;
+                line-height: 1.43em;
+            }
+        }
+    }
+
+    &__agreement {
+        grid-column: 1 / 3;
+        margin: 0;
+        margin-bottom: 4px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.777em;
+        line-height: 1.43em;
+        color: $color-gray;
+
+        @media (max-width: 800px) {
+            order: 8;
+            margin-bottom: 17px;
+            font-size: 0.666em;
+            line-height: 1.33em;
+        }
+    }
+
+    &__button {
+        width: -moz-fit-content;
+        width: -webkit-fit-content;
+        width: fit-content;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        padding-left: 33px;
+        padding-right: 33px;
+
+        @media (max-width: 800px) {
+            width: auto;
+            min-height: auto;
+            order: 9;
+            font-size: 0.666em;
+            line-height: 1.33em;
+        }
+    }
+}
